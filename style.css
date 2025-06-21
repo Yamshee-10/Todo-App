@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background:#141313;
+    --primary-color:#4d4d4d;
+    --secondary-color:#747070;
+    --tertiary-color:#1b88e1;
+    --text-color:#ffffff;
+    --accent-color:#4ec3d5;
+}
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+    color: var(--text-color);
+}
+body{
+
+    display: flex;
+    padding: 10px;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background);
+}
+h1{
+    color:var(--accent-color);
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    max-width: 100%;
+    gap: 10px;
+}
+form{
+    position: relative;
+}
+#todo-input{
+
+    padding:13px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    background:none;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1000px;
+    font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+}
+#add{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 13px 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--secondary-color);
+    border-radius: 1000px;
+    font: inherit;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+#todo-list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    border-radius: 16px;
+}
+.todo{
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+    border-radius: 1000px;
+    padding: 0 15px;
+    display: flex;
+}
+.todo-text{
+    margin: 5px 0 5px 20px;
+    display: flex;
+    flex-grow: 1;
+}
+button{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.img-check{
+    height: 20px;
+    display: flex;
+    margin-top: 10px;
+}
+.img-check:hover{
+    transition: 0.2ms ease;
+    height: 23px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
+.img-bin{
+    height: 25px;
+    background-color: var(--primary-color);
+}
+.img-bin:hover{
+    transition: 0.2ms ease;
+    height: 30px;
+}
